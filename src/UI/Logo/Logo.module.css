@@ -1,0 +1,9 @@
+.Logo {
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+    background-color: rgb(255, 169, 252);
+    border-bottom: 1px solid #FFEFD5;
+    text-align: center;
+    color: white;
+}
