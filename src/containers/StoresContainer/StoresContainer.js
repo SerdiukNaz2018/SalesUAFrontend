@@ -23,14 +23,14 @@ class StoresContainer extends Component {
         const stores = this.state.stores.map(store => (
             <Route
                 key={store.id}
-                path={"/" + store.id}
+                path={"/" + store.title}
                 render={() => <Store storeId={store.id} storeName = {store.title}/>}
             />
         ));
 
         return (
             <div>
-                <Redirect from="/" to="/1" />
+                <Redirect from="/" to="/АТБ" />
                 {stores}
             </div>
         );
