@@ -12,7 +12,7 @@ class Store extends Component {
 
     componentDidMount() {
         axios
-            .get("https://course-project-react.firebaseio.com/storeProducts/" + this.props.storeId + ".json")
+            .get("https://localhost:44383/api/shops/" + this.props.storeId + "/products")
             .then(response => {
                 this.setState({
                     loading: false,
@@ -23,15 +23,15 @@ class Store extends Component {
     }
 
     render() {
-        const products = this.state.products.map(product => (
+        const products = this.state.products.map((product, index) => (
             <Product
-                key={product.Id}
-                title = {product.Title}
-                imageAdress={product.ImagePath}
-                oldPrice={product.OldPrice}
-                newPrice={product.NewPrice}
-                description={product.Description}
-                discount = {product.DiscountPercent}
+                key = {index}
+                title = {product.title}
+                imageAdress={product.imagePath}
+                oldPrice={product.oldPrice}
+                newPrice={product.newPrice}
+                description={product.description}
+                discount = {product.discountPercent}
             />
         ));
         return (

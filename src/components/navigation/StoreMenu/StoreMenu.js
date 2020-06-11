@@ -11,11 +11,12 @@ class StoreMenu extends Component {
 
     componentDidMount() {
         axios
-            .get("https://course-project-react.firebaseio.com/stores.json")
+            .get("https://localhost:44383/api/shops")
             .then(response => {
                 this.setState({ loading: false, stores: response.data });
             })
             .catch(error => {
+                this.setState({loading: false});
                 console.log(error);
             });
     }

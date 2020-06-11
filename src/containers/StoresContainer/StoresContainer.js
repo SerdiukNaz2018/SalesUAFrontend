@@ -10,7 +10,7 @@ class StoresContainer extends Component {
 
     componentDidMount() {
         axios
-            .get("https://course-project-react.firebaseio.com/stores.json")
+            .get("https://localhost:44383/api/shops")
             .then(response => {
                 this.setState({ stores: response.data });
             })
@@ -30,7 +30,7 @@ class StoresContainer extends Component {
 
         return (
             <div>
-                <Redirect from="/" to="/0" />
+                <Redirect from="/" to="/1" />
                 {stores}
             </div>
         );

@@ -1,6 +1,6 @@
 .Product {
     width: 290px;
-    height: 480px;
+    height: fit-content;
     display: inline-block;
     margin: 10px;
     border: 1px solid #ccc;
@@ -29,6 +29,26 @@
     font-weight: 600;
 }
 
+.DescriptionHolder {
+    padding: 0;
+    height: 70px;
+    overflow-y: scroll;
+    margin: 5px auto;
+    width: 200px;
+}
+
+.DescriptionHolder::-webkit-scrollbar,
+.TitleHolder::-webkit-scrollbar {
+    display: none;
+}
+
+.TitleHolder {
+    width: 90%;
+    height: 90px;
+    margin: auto;
+    overflow-y: scroll;
+}
+
 .Title {
     font-weight: 700;
 }
@@ -48,7 +68,7 @@
 }
 
 .Product:hover .Discount {
-    padding: 20px;
+    padding: 13px;
 }
 
 .Discount h2 {
